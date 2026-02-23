@@ -42,10 +42,13 @@ Follow these steps to get started:
 
 ## 🧪 Usage
 
-You can test the login endpoint in your browser:
+You can test the login & signup endpoint in your browser:
 
 ```
 http://localhost:8080/api/users/login?username=admin&password=test_123&hwid=test_hwid_id
+```
+```
+http://localhost:8080/api/users/signup?username=test&password=123
 ```
 
 ---

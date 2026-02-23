@@ -34,3 +34,36 @@ export const auth_login = async (req: Request, res: Response) => {
 
   return res.status(200).send("Logged in");
 };
+
+
+// How to use: http://localhost:8080/api/users/signup?username=test&password=123
+export const auth_signup = async (req: Request, res: Response) => {
+  try {
+    const userName = req.query.username as string;
+    const userPassword = req.query.password as string;
+
+    if (!userName || !userPassword) {
+      return res.status(400).send("Username or password not found!");
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const userPasswordHashed = await bcrypt.hash(userPassword, salt);
+
+    const { error } = await supabase
+      .from('users')
+      .insert({
+        username: userName.trim(),
+        password: userPasswordHashed,
+      });
+
+    if (error) {
+      console.error("Signup error:", error.message);
+      return res.status(500).send("Database error");
+    }
+
+    return res.status(201).send("User created successfully");
+  } catch (err) {
+    console.error("Unexpected signup error:", err);
+    return res.status(500).send("Internal server error");
+  }
+};

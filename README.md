@@ -75,6 +75,21 @@ This creates a user:
 
 ---
 
+## ✏️ Contributing & Customization
+
+Feel free to make any changes to this code to fit your own needs.
+This project is meant to be flexible and easy to modify, so you can:
+
+* Add new routes or endpoints
+* Improve security and validation
+* Expand the authentication system
+* Integrate additional features
+* Adapt it for your own projects
+
+Pull requests, forks, and personal modifications are welcome.
+
+---
+
 ## ⚠️ Disclaimer
 
 This project is for educational purposes only.

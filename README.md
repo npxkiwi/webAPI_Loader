@@ -38,6 +38,11 @@ Follow these steps to get started:
 
 3. Set up your Supabase project and database.
 
+4. Run start/dev
+   ```bash
+   npm run dev
+   ```
+
 ---
 
 ## 🧪 Usage
@@ -50,13 +55,6 @@ http://localhost:8080/api/users/login?username=admin&password=test_123&hwid=test
 ```
 http://localhost:8080/api/users/signup?username=test&password=123
 ```
-```
-npm run dev
-```
-```
-npm run start
-```
-
 ---
 
 ## 🗃 Example Database Entry

@@ -50,6 +50,12 @@ http://localhost:8080/api/users/login?username=admin&password=test_123&hwid=test
 ```
 http://localhost:8080/api/users/signup?username=test&password=123
 ```
+```
+npm run dev
+```
+```
+npm run start
+```
 
 ---
 

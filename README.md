@@ -1,23 +1,87 @@
-# Web API
+# 🚀 Web API
 
-This is a basic and not realy great way of making a web api server for you cheat loader.
+A simple and lightweight Web API example designed for a cheat loader. This project demonstrates a basic authentication flow, middleware, and Supabase integration. It is intended as a starting point and **not production-ready**.
 
-## Includes
-* Supabase for database
-* Auth system (Checks if the user exists and for ban)
-* Middleware (Auth)
-* Routes (Auth)
+---
 
-## Setup
-* Install all packages with `npm i`
-* Setup .env file
-* Setup Supabase database
+## 📦 Features
 
-## How to use?
-This is how you can use it in you web browser:
-``http://localhost:8080/api/users/login?username=admin&password=test_123&hwid=test_hwid_id``  
-Add this to your Supabase:
-```sql
-INSERT INTO "public"."users" ("id", "username", "password", "created_at", "hwid", "banned", "banned_reason") VALUES ('0b17f896-6d5c-4f6b-a367-aeb51991a0cc', 'admin', '$2b$10$S/U.PxSvg2zrd.aDdJcVteBSFqcue7mX665p564WNVw6ns1hKmp9O', '2026-02-22 14:25:09', 'test_hwid_id', 'false', 'Du er en lille taber :(');
+* 🔐 **Authentication system**
+
+  * Validates user credentials
+  * Checks if the user exists
+  * Handles banned users
+
+* 🗄 **Supabase database integration**
+
+* 🧩 **Middleware**
+
+  * Authentication and request validation
+
+* 🛣 **Auth routes**
+
+  * Login endpoint
+
+---
+
+## ⚙️ Setup
+
+Follow these steps to get started:
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Create and configure your `.env` file.
+
+3. Set up your Supabase project and database.
+
+---
+
+## 🧪 Usage
+
+You can test the login endpoint in your browser:
+
 ```
-This creates a user called admin where the password is test_123 and the hwid is test_hwid.
+http://localhost:8080/api/users/login?username=admin&password=test_123&hwid=test_hwid_id
+```
+
+---
+
+## 🗃 Example Database Entry
+
+Add the following user to your Supabase database:
+
+```sql
+INSERT INTO "public"."users"
+("id", "username", "password", "created_at", "hwid", "banned", "banned_reason")
+VALUES
+('0b17f896-6d5c-4f6b-a367-aeb51991a0cc',
+ 'admin',
+ '$2b$10$S/U.PxSvg2zrd.aDdJcVteBSFqcue7mX665p564WNVw6ns1hKmp9O',
+ '2026-02-22 14:25:09',
+ 'test_hwid_id',
+ false,
+ 'Example ban reason');
+```
+
+This creates a user:
+
+* **Username:** `admin`
+* **Password:** `test_123`
+* **HWID:** `test_hwid_id`
+
+---
+
+## ⚠️ Disclaimer
+
+This project is for educational purposes only.
+It lacks proper security, validation, and scalability required for production environments.
+
+---
+
+## 📬 Contact
+
+Discord: `._.notepad`
